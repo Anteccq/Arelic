@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Arelic.Models.Cryptography
 {
-    internal interface ICrypto
+    public interface ICrypto
     {
         public Task<EncryptedMessage> EncryptAsync(string password, byte[] rawData, CancellationToken cancellationToken = default);
         public Task<byte[]> DecryptAsync(string password, EncryptedMessage message, CancellationToken cancellationToken = default);

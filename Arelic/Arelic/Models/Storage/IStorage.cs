@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Arelic.Models.Storage
 {
-    internal interface IStorage
+    public interface IStorage
     {
         Task<EncryptedMessage> ReadAsync(string path, CancellationToken cancellationToken);
         Task WriteAsync(string path, EncryptedMessage message, CancellationToken cancellationToken);
