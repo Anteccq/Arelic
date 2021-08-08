@@ -10,7 +10,4 @@
     mc:Ignorable="d"
     Background="{c:ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-    <Grid>
-        <Button>Arisa</Button>
-    </Grid>
 </Page>
