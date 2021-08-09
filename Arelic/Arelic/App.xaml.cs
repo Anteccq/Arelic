@@ -1,8 +1,12 @@
 ﻿using Microsoft.UI.Xaml;
 using System;
 using Arelic.Models.Cryptography;
+using Arelic.Models.Services;
 using Arelic.Models.Storage;
+using Arelic.ViewModels;
+using Arelic.ViewModels.MainWindowPages;
 using Arelic.Views;
+using Arelic.Views.MainWindowPages;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -37,6 +41,9 @@ namespace Arelic
             {
                 services.AddSingleton<ICrypto, EyeCrypto>();
                 services.AddSingleton<IStorage, FileStorage>();
+                services.AddSingleton<IBlockService, BlockService>();
+                services.AddSingleton<AuthPageViewModel>();
+                services.AddSingleton<MainWindowViewModel>();
                 services.AddSingleton<MainWindow>();
             }).GetService<MainWindow>()?.Activate();
         }

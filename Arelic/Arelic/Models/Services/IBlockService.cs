@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Arelic.Models.Services
 {
-    internal interface IBlockService
+    public interface IBlockService
     {
         public Task<List<Block>> GetBlocksAsync(string password, string filePath, CancellationToken cancellationToken = default);
 

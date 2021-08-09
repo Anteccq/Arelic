@@ -1,7 +1,10 @@
 using System;
+using System.IO;
 using System.Text;
 using System.Threading.Tasks;
 using Arelic.Models.Cryptography;
+using Arelic.Models.Services;
+using Arelic.Models.Storage;
 using Xunit;
 
 namespace Arelic.Tests

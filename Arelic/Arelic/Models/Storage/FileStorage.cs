@@ -11,6 +11,7 @@ namespace Arelic.Models.Storage
 {
     public class FileStorage : IStorage
     {
+        public const string DefaultPath = "./.relic";
         public async Task<EncryptedMessage> ReadAsync(string path, CancellationToken cancellationToken)
         {
             await using var fs = new FileStream(path, FileMode.Open, FileAccess.Read);

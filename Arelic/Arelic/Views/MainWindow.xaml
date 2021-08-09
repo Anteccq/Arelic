@@ -6,9 +6,18 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:xaml="using:Microsoft.UI.Xaml"
+    xmlns:data="using:Microsoft.UI.Xaml.Data"
     xmlns:views="using:Arelic.Views"
     xmlns:pages="using:Arelic.Views.MainWindowPages"
+    xmlns:ui="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     mc:Ignorable="d">
     <Grid>
+        <Frame x:Name="ContentFrame">
+            <Frame.ContentTransitions>
+                <ui:TransitionCollection>
+                    <ui:NavigationThemeTransition  />
+                </ui:TransitionCollection>
+            </Frame.ContentTransitions>
+        </Frame>
     </Grid>
 </xaml:Window>
